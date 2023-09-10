@@ -1,0 +1,8 @@
+.main {
+    height: 100%;
+    width: calc(100vw - 25rem);
+    padding: 4rem;
+    background-color: #f2f6ff;
+
+    display: grid;
+}
