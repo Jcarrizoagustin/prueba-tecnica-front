@@ -2,8 +2,13 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Menu from "./components/menu/Menu";
 import Main from "./components/main/Main";
-import DoctorContainer from "./components/doctor/DoctorContainer";
-import PacienteContainer from "./components/paciente/PacienteContainer";
+import { Route, Routes } from "react-router-dom";
+
+import InicioPage from "./pages/InicioPage";
+import DoctoresPage from "./pages/DoctoresPage";
+import EspecialidadesPage from "./pages/EspecialidadesPage";
+import PacientesPage from "./pages/PacientesPage";
+import TurnosPage from "./pages/TurnosPage";
 
 function App() {
   const [user, setUser] = useState({});
@@ -26,8 +31,13 @@ function App() {
     <>
       <Menu />
       <Main>
-        <DoctorContainer />
-        <PacienteContainer />
+        <Routes>
+          <Route path="/inicio" element={<InicioPage />} />
+          <Route path="/doctores" element={<DoctoresPage />} />
+          <Route path="/especialidades" element={<EspecialidadesPage />} />
+          <Route path="/pacientes" element={<PacientesPage />} />
+          <Route path="/turnos" element={<TurnosPage />} />
+        </Routes>
       </Main>
     </>
   );

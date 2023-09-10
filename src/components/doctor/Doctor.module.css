@@ -1,0 +1,24 @@
+.doctorCard {
+    height: 3rem;
+    width: 100%;
+    border: 1px solid black;
+
+    border-radius: .5rem;
+    padding: 0 1rem;
+
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.name{
+    width: 40%;
+    text-align: start;
+}
+
+.especialidad {
+    width: 30%;
+    text-align: start;
+}

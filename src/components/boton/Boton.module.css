@@ -1,0 +1,16 @@
+.boton {
+    width: 5rem;
+    height: 2rem;
+    border-radius: .5rem;
+
+    border: 1px solid pink;
+
+    color: white;
+    background-color: #0068ff;
+
+    text-align: center;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
