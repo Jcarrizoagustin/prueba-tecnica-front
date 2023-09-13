@@ -1,8 +1,28 @@
-# React + Vite
+# Prueba técnica Certant - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Agustin Carrizo
 
-Currently, two official plugins are available:
+### Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para el correcto funcionamiento de la aplicacion es necesario tener la siguiente dependencia
+
+- [NodeJS](https://nodejs.org/es)
+
+## Pasos para ejecutar la aplicacion frontend
+
+```sh
+git clone https://github.com/Jcarrizoagustin/prueba-tecnica-front.git
+cd prueba-tecnica-front
+npm install
+npm run dev
+```
+
+Esta aplicacion utiliza el puerto 5173, por lo que es importante que se encuentre disponible
+
+Ingresar al navegador http://localhost:5173
+
+## Herramientas utilizadas
+
+- [React](https://es.react.dev/) - Libreria de desarrollo
+- [React Hot Toast](https://es.react.dev/) - Libreria de notificaciones
+- [React Router Dom](https://reactrouter.com/en/main) - Libreria de enrutamiento
