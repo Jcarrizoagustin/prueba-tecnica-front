@@ -1,22 +1,11 @@
-import { useEffect, useState } from "react";
-import BarraBusqueda from "../busqueda/BarraBusqueda";
-import Doctor from "./Doctor";
-import styles from "./DoctorContainer.module.css";
-import HorariosModal from "./modal/HorariosModal";
+import styles from "./SeleccionarDoctor.module.css";
+import { useState, useEffect } from "react";
+import BarraBusqueda from "../../../busqueda/BarraBusqueda";
+import Doctor from "../../../doctor/Doctor";
 
-export default function DoctorContainer() {
+export default function SeleccionarDoctor({ handleClick }) {
   const [doctoresApi, setDoctoresApi] = useState([]);
   const [doctores, setDoctores] = useState([]);
-  const [doctor, setDoctor] = useState(null);
-
-  const [showModal, setShowModal] = useState(false);
-
-  const mostrarModal = (id) => {
-    setShowModal(true);
-    setDoctor(id);
-  };
-
-  const ocultarModal = () => setShowModal(false);
 
   const getData = async () => {
     try {
@@ -89,11 +78,11 @@ export default function DoctorContainer() {
           <Doctor
             key={doctor.id}
             doctor={doctor}
-            hadleClick={() => mostrarModal(doctor)}
+            hadleClick={() => handleClick(doctor)}
+            buttonText={"Selecionar"}
           />
         ))}
       </div>
-      {showModal && <HorariosModal close={ocultarModal} doctor={doctor} />}
     </div>
   );
 }

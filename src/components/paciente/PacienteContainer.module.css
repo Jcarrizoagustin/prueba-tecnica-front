@@ -1,9 +1,34 @@
 .container{
-    border: 1px solid red;
+    border: 1px solid black;
     border-radius: 1rem;
-    width: 45%;
-    height: 25rem;
+    width: 100%;
+    height: 33rem;
     padding: .5rem;
 
     background-color: white;
+    overflow: scroll;
+}
+
+.back{
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #007878;
+}
+
+.header {
+    font-size: 1.3rem;
+    height: 2rem;
+
+    margin: 1rem 0;
+
+    border-radius: .5rem;
+    background-color: gainsboro;
+
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+
+.list{
+    display: grid;
+    gap: 1rem;
 }

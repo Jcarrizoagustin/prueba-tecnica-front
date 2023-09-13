@@ -1,0 +1,8 @@
+.card{
+    display: grid;
+    padding: .5rem;
+    border-radius: .5rem;
+    grid-template-columns: repeat(5,1fr);
+
+    background-color: aliceblue;
+}

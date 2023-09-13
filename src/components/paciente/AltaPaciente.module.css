@@ -1,0 +1,49 @@
+.container {
+    margin: 1rem auto;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+
+    padding: .2rem;
+}
+
+.formImput {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formInputDate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 59%;
+}
+
+label {
+    justify-self: start;
+}
+
+
+
+
+.btn {
+    border: none;
+    border-radius: .5rem;
+    padding: .3rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background-color: #0068ff;
+}
+
+.btn:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.card{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+
+    background-color: aliceblue;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+}

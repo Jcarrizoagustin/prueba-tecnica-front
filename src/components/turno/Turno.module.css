@@ -1,0 +1,19 @@
+.turno {
+    width: 97%;
+    margin: 0 auto;
+
+    height: 3rem;
+    border-radius: .5rem;
+
+    background-color: aliceblue;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}

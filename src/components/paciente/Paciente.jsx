@@ -1,11 +1,23 @@
 import styles from "./Paciente.module.css";
-export default function Paciente({ paciente }) {
+import Boton from "../boton/Boton";
+export default function Paciente({
+  paciente,
+  handleClickHistorial,
+  handleNuevoTurno,
+}) {
   return (
     <div className={styles.card}>
-      <h2>Paciente</h2>
-      <h3>Nombre: {paciente.name}</h3>
-      <h3>Apellido: {paciente.surname}</h3>
-      <h3>Teléfono: {paciente.phone}</h3>
+      <span>
+        {paciente.nombre} {paciente.apellido}
+      </span>
+      <span>{paciente.dni}</span>
+      <span>{paciente.fechaNacimiento}</span>
+      <span>{paciente.correo}</span>
+      <span>{paciente.telefono}</span>
+      <div className={styles.botones}>
+        <Boton text={"Historial"} handleClick={handleClickHistorial} />
+        <Boton text={"+ Turno"} handleClick={handleNuevoTurno} />
+      </div>
     </div>
   );
 }

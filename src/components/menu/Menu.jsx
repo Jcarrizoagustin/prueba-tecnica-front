@@ -8,14 +8,8 @@ export default function Menu() {
       </div>
 
       <nav className={styles.nav}>
-        <Link to={"/inicio"} className={styles.link}>
-          Inicio
-        </Link>
         <Link to={"/doctores"} className={styles.link}>
           Doctores
-        </Link>
-        <Link to={"/especialidades"} className={styles.link}>
-          Especialidades
         </Link>
         <Link to={"/pacientes"} className={styles.link}>
           Pacientes

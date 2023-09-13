@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.red {
+    background-color: #ff5051;
+}
+
 .boton:hover{
     cursor: pointer;
 }

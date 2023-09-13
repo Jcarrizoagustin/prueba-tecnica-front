@@ -1,0 +1,64 @@
+.modal {
+    position: absolute;
+    z-index: 100;
+    height: 90%;
+    width: 50%;
+    border: 1px solid black;
+
+    border-radius: 1rem;
+
+    background-color: #007878;
+    top: 5rem;
+    left: 40rem;
+
+    padding-top: 1rem;
+
+
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 50;
+
+    background-color: black;
+    opacity: .2;
+}
+
+.iconClose{
+    color: white;
+    border: 1px solid white;
+    border-radius: .2rem;
+    padding: .2rem;
+
+}
+
+.iconClose:hover{
+    cursor: pointer;
+}
+
+.list {
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 95%;
+    margin: 0 auto;
+    height: 90%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.header{
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
