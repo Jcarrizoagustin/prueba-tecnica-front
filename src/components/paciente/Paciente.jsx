@@ -12,7 +12,6 @@ export default function Paciente({
       </span>
       <span>{paciente.dni}</span>
       <span>{paciente.fechaNacimiento}</span>
-      <span>{paciente.correo}</span>
       <span>{paciente.telefono}</span>
       <div className={styles.botones}>
         <Boton text={"Historial"} handleClick={handleClickHistorial} />

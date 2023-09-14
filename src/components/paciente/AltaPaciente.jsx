@@ -137,8 +137,9 @@ export default function AltaPaciente() {
         />
       </div>
 
-      <div className={`${styles.formImput} ${styles.formInputDate}`}>
-        <label htmlFor="fecha_nacimiento">Fecha de nacimiento</label>
+      <div className={styles.formImput}>
+        <label htmlFor="fecha_nacimiento">Fecha Nacimiento</label>
+
         <input
           id="fecha_nacimiento"
           type="date"

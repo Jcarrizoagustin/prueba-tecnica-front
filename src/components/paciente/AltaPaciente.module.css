@@ -1,38 +1,32 @@
+
 .container {
+    background-color: white;
     margin: 1rem auto;
     border: 1px solid black;
     border-radius: 1rem;
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .3rem;
     justify-content: center;
     align-items: center;
-
-
     padding: .2rem;
 }
 
+input {
+    background-color: aliceblue;
+}
+
 .formImput {
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: start;
 }
-
-.formInputDate{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 59%;
-}
-
-label {
-    justify-self: start;
-}
-
-
 
 
 .btn {
+    margin-top: 1rem;
     border: none;
     border-radius: .5rem;
     padding: .3rem 1rem;

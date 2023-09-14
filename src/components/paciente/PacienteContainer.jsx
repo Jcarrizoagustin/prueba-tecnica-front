@@ -59,32 +59,35 @@ export default function PacienteContainer() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.back}>
-        <BarraBusqueda handleChange={(e) => filtrarPorPaciente(e)} />
-      </div>
-      <div className={styles.header}>
-        <span>Nombre</span>
-        <span>Dni</span>
-        <span>Nacimiento</span>
-        <span>Correo</span>
-        <span>Telefono</span>
-        <span>Acciones</span>
-      </div>
-      <div className={styles.list}>
-        {pacientes.map((e) => (
-          <Paciente
-            key={e.id}
-            paciente={e}
-            handleClickHistorial={() => mostrarModal(e.id)}
-            handleNuevoTurno={() => mostrarNuevoTurno(e.id)}
-          />
-        ))}
+    <>
+      <div className={styles.containerRadius}>
+        <div className={styles.container}>
+          <div className={styles.back}>
+            <BarraBusqueda handleChange={(e) => filtrarPorPaciente(e)} />
+          </div>
+          <div className={styles.header}>
+            <span>Nombre</span>
+            <span>Dni</span>
+            <span>Nacimiento</span>
+            <span>Telefono</span>
+            <span>Acciones</span>
+          </div>
+          <div className={styles.list}>
+            {pacientes.map((e) => (
+              <Paciente
+                key={e.id}
+                paciente={e}
+                handleClickHistorial={() => mostrarModal(e.id)}
+                handleNuevoTurno={() => mostrarNuevoTurno(e.id)}
+              />
+            ))}
+          </div>
+        </div>
       </div>
       {showModal && <HistorialModal close={ocultarModal} id={pacienteId} />}
       {showNuevoTurno && (
         <NuevoTurno close={ocultarNuevoTurno} id={pacienteId} />
       )}
-    </div>
+    </>
   );
 }

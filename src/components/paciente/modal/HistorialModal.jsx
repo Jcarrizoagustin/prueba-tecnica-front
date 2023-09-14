@@ -27,7 +27,7 @@ export default function HistorialModal({ close, id }) {
   }, []);
 
   return (
-    <>
+    <div className={styles.container}>
       <div onClick={() => close()} className={styles.background}></div>
       <div className={styles.modal}>
         <span onClick={() => close()} className={styles.iconClose}>
@@ -48,7 +48,6 @@ export default function HistorialModal({ close, id }) {
           )}
         </div>
       </div>
-      ;
-    </>
+    </div>
   );
 }
