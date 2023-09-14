@@ -1,15 +1,22 @@
-.container {
+.modalContainer{
     position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    position: relative;
+    top: calc((100vh/2) - 12.5rem );
+    left: calc((100vw/2) - 22.5rem);
     z-index: 100;
-    height: 60%;
-    width: 50%;
+    height: 25rem;
+    width: 45rem;
     border: 1px solid black;
 
     border-radius: 1rem;
 
     background-color: #007878;
-    top: 5rem;
-    left: 40rem;
+   
 
     padding-top: 1rem;
 
