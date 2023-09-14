@@ -55,3 +55,7 @@ input {
 .column {
     font-weight: 700;
 }
+
+input[type="date"]:hover {
+    cursor: pointer;
+}

@@ -35,6 +35,7 @@ export default function NuevoTurno({ close, id }) {
       const data = await res.json();
       if (res.ok) {
         toast.success("Turno agregado con exito");
+        close();
       } else {
         toast.error(data.message);
       }
@@ -44,32 +45,34 @@ export default function NuevoTurno({ close, id }) {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <div onClick={() => close()} className={styles.background}></div>
-      <div className={styles.container}>
+      <div className={styles.nuevoTurno}>
         <h2 className={styles.h2}>Nuevo Turno</h2>
-        <div className={styles.input}>
-          <label htmlFor="dia">Dia</label>
-          <input ref={dia} type="date" />
-        </div>
-        <div className={styles.input}>
-          <label htmlFor="hora">Hora</label>
-          <input
-            ref={hora}
-            type="time"
-            id="hora"
-            name="hora"
-            min="08:00"
-            max="22:30"
-          />
-        </div>
-        <div className={styles.input}>
-          <label htmlFor="consultorio">Consultorio</label>
-          <select ref={consultorio} name="" id="consultorio">
-            <option value="1">Consultorio 1</option>
-            <option value="2">Consultorio 2</option>
-            <option value="3">Consultorio 3</option>
-          </select>
+        <div className={styles.formInputs}>
+          <div className={styles.input}>
+            <label htmlFor="dia">Dia</label>
+            <input ref={dia} type="date" />
+          </div>
+          <div className={styles.input}>
+            <label htmlFor="hora">Hora</label>
+            <input
+              ref={hora}
+              type="time"
+              id="hora"
+              name="hora"
+              min="08:00"
+              max="22:30"
+            />
+          </div>
+          <div className={styles.input}>
+            <label htmlFor="consultorio">Consultorio</label>
+            <select ref={consultorio} name="" id="consultorio">
+              <option value="1">Consultorio 1</option>
+              <option value="2">Consultorio 2</option>
+              <option value="3">Consultorio 3</option>
+            </select>
+          </div>
         </div>
 
         <div>
@@ -87,6 +90,6 @@ export default function NuevoTurno({ close, id }) {
         </div>
       </div>
       ;
-    </>
+    </div>
   );
 }

@@ -43,9 +43,7 @@ export default function TurnoContainer() {
   };
 
   const filtrarPorFecha = (fecha) => {
-    const filtro = turnosApi.filter(
-      (n) => n.dia === fecha.replaceAll("/", "-")
-    );
+    const filtro = turnosApi.filter((n) => n.dia === fecha);
     console.log(fecha);
     setTurnos(filtro);
   };
@@ -74,9 +72,7 @@ export default function TurnoContainer() {
           <input
             type="date"
             id="fecha"
-            onChange={(e) =>
-              filtrarPorFecha(e.target.value.replaceAll("-", "/"))
-            }
+            onChange={(e) => filtrarPorFecha(e.target.value)}
           />
         </div>
       </div>
