@@ -13,17 +13,7 @@ export default function AltaPaciente() {
   });
   const [datosValidados, setDatosValidados] = useState(false);
 
-  const actualizarEstado = (e) => {
-    const { name, value } = e.target;
-    setNuevoPaciente((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-    const data = validadDatos();
-    setDatosValidados(data);
-  };
-
-  const validadDatos = () => {
+  const validarDatos = () => {
     if (nuevoPaciente.nombre.length < 2) {
       return false;
     }
@@ -36,6 +26,7 @@ export default function AltaPaciente() {
     ) {
       return false;
     }
+
     if (nuevoPaciente.dni.length != 8) {
       return false;
     }
@@ -44,6 +35,16 @@ export default function AltaPaciente() {
     }
 
     return true;
+  };
+
+  const actualizarEstado = (e) => {
+    const { name, value } = e.target;
+    setNuevoPaciente((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+    const data = validarDatos();
+    setDatosValidados(data);
   };
 
   const agregarPaciente = async () => {
