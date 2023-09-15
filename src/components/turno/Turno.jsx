@@ -2,7 +2,7 @@ import styles from "./Turno.module.css";
 import Boton from "../boton/Boton";
 import toast from "react-hot-toast";
 
-export default function Turno({ turno, data }) {
+export default function Turno({ turno, data, openModalModificar }) {
   const cancelarTurno = async (id) => {
     try {
       const res = await fetch("http://localhost:8080/api/v1/turnos/" + id, {
@@ -22,6 +22,45 @@ export default function Turno({ turno, data }) {
     }
   };
 
+  const handleCancelarTurno = (id) => {
+    toast(
+      (t) => (
+        <span>
+          Seguro de que quiere cancelar el turno ?
+          <div
+            style={{
+              display: "flex",
+              gap: "2rem",
+              justifyContent: "center",
+              marginTop: ".5rem",
+            }}
+          >
+            <button
+              onClick={() => {
+                cancelarTurno(id);
+                toast.dismiss(t.id);
+              }}
+            >
+              ✔️
+            </button>
+            <button
+              onClick={() => {
+                toast.dismiss(t.id);
+              }}
+            >
+              ❌
+            </button>
+          </div>
+        </span>
+      ),
+      {
+        style: {
+          width: "400px",
+        },
+      }
+    );
+  };
+
   return (
     <div className={styles.turno}>
       <span>
@@ -38,9 +77,13 @@ export default function Turno({ turno, data }) {
           id={turno.id}
           text={"Cancelar"}
           color={"red"}
-          handleClick={cancelarTurno}
+          handleClick={handleCancelarTurno}
         />
-        <Boton id={turno.id} text={"Modificar"} />
+        <Boton
+          id={turno.id}
+          text={"Modificar"}
+          handleClick={openModalModificar}
+        />
       </div>
     </div>
   );

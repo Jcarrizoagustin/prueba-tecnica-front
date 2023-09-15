@@ -24,5 +24,5 @@ Ingresar al navegador http://localhost:5173
 ## Herramientas utilizadas
 
 - [React](https://es.react.dev/) - Libreria de desarrollo
-- [React Hot Toast](https://es.react.dev/) - Libreria de notificaciones
+- [React Hot Toast](https://react-hot-toast.com/) - Libreria de notificaciones
 - [React Router Dom](https://reactrouter.com/en/main) - Libreria de enrutamiento
